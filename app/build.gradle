@@ -6,6 +6,7 @@ plugins {
 }
 
 android {
+    namespace 'com.plcoding.cleanarchitecturenoteapp'
     compileSdk 31
 
     defaultConfig {
@@ -32,8 +33,7 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
     kotlinOptions {
-        jvmTarget = '1.8'
-        useIR = true
+        jvmTarget = '17'
     }
     buildFeatures {
         compose true

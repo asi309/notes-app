@@ -7,6 +7,7 @@ import com.plcoding.cleanarchitecturenoteapp.feature_note.data.repository.NoteRe
 import com.plcoding.cleanarchitecturenoteapp.feature_note.domain.repository.NoteRepository
 import com.plcoding.cleanarchitecturenoteapp.feature_note.domain.use_case.AddNoteUseCase
 import com.plcoding.cleanarchitecturenoteapp.feature_note.domain.use_case.DeleteNoteUseCase
+import com.plcoding.cleanarchitecturenoteapp.feature_note.domain.use_case.GetNoteUseCase
 import com.plcoding.cleanarchitecturenoteapp.feature_note.domain.use_case.GetNotesUseCase
 import com.plcoding.cleanarchitecturenoteapp.feature_note.domain.use_case.NoteUseCases
 import dagger.Module
@@ -41,6 +42,7 @@ object AppModule {
             getNotesUseCase = GetNotesUseCase(repository = noteRepository),
             deleteNoteUseCase = DeleteNoteUseCase(repository = noteRepository),
             addNoteUseCase = AddNoteUseCase(repository = noteRepository),
+            getNoteUseCase = GetNoteUseCase(repository = noteRepository),
         )
     }
 }
